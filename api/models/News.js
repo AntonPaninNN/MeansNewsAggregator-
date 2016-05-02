@@ -9,25 +9,39 @@ module.exports = {
 
   attributes: {
 
+    id: {
+      type: 'string',
+      required: true,
+      unique: true
+    },
+
+    link: {
+      type: 'string'
+    },
+
   	title: {
-  		type: 'string',
-  		required: true
+  		type: 'string'
   	},
 
   	intro: {
-  		type: 'string',
-  		required: true
+  		type: 'string'
   	},
 
-  	textUrl: {
-  		type: 'string',
-  		required: true,
-  		unique: true
+  	text: {
+  		type: 'string'
   	},
     
   	pictureUrl: {
   		type: 'string'
-  	}
+  	},
+
+    pubDate: {
+      type: 'datetime'
+    },
+
+    author: {
+      type: 'string'
+    }
   }
 };
 

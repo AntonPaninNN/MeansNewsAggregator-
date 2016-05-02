@@ -22,15 +22,23 @@ module.exports = {
 	},
 
 	setNews: function(req, res) {
+		var crypto = require('crypto');
 		var news = {
+			id: crypto.randomBytes(20).toString('hex'),
 			title: req.param('title'),
 			intro: req.param('intro'),
-			textUrl: req.param('texturl'),
+			text: req.param('text'),
 			pictureUrl: req.param('pictureurl')
 		};
 		NewsService.setNews(news, function(success) {
 			res.json(success);
 		});
-	}	
+	},	
+
+	deleteAllNews: function(req, res) {
+		NewsService.deleteAllNews(function(result) {
+			res.json(result);
+		});
+	}
 };
 
