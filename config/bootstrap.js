@@ -10,8 +10,14 @@
  */
 
 module.exports.bootstrap = function(cb) {
-
-  // It's very important to trigger this callback method when you are finished
-  // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-  cb();
+	sails.on('lifted', function() {
+		SocketService.createSocket();
+		setInterval(function() {
+			//sockIo.sockets.emit('eventClient', "this is a test");
+			PollingService.parseData('http://www.computerweekly.com/rss/Latest-IT-news.xml');
+		}, 30 * 1000);
+	});
+	// It's very important to trigger this callback method when you are finished
+	// with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
+	cb();
 };

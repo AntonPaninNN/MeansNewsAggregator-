@@ -36,7 +36,7 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  'get /fuck/yeah': 'NewsController.getNews'
+  /*'get /fuck/yeah': 'NewsController.getNews'*/
 
   /***************************************************************************
   *                                                                          *
