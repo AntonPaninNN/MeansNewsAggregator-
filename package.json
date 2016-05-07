@@ -1,31 +1,38 @@
 {
-  "name": "MeansNewsAggregator",
+  "name": "means-news-aggregator",
   "private": true,
-  "version": "0.0.1",
-  "description": "Means News Aggregator",
+  "version": "0.1.0",
+  "description": "IT news aggreagator writen using MEANS stack",
   "main": "app.js",
   "dependencies": {
-    "bower": "^1.4.1",
     "ejs": "~0.8.4",
     "forever": "^0.11.1",
-    "grunt": "0.4.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-coffee": "~0.10.1",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-cssmin": "~0.9.0",
-    "grunt-contrib-jst": "~0.6.0",
-    "grunt-contrib-less": "0.11.1",
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-sails-linker": "~0.9.5",
-    "grunt-sync": "~0.0.4",
-    "include-all": "~0.1.3",
+    "grunt": "^1.0.1",
+    "jsdom": "^8.5.0",
     "q": "^1.4.1",
     "rc": "~0.5.0",
     "sails": "~0.11.0",
     "sails-disk": "~0.10.0",
-    "sails-mongo": "^0.12.0"
+    "sails-mongo": "^0.12.0",
+    "time-grunt": "^1.3.0",
+    "xml2js": "^0.4.16"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-uglify": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-eslint": "^18.0.0",
+    "grunt-sass": "^1.1.0",
+    "grunt-sync": "~0.0.4",
+    "jasmine-core": "^2.4.1",
+    "jit-grunt": "^0.10.0",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7",
+    "load-grunt-config": "^0.19.2"
   },
   "scripts": {
     "debug": "node debug app.js",
@@ -33,8 +40,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/MeansNewsAggregator.git"
+    "url": "git@github.com:FullStackNN/MeansNewsAggregator-.git"
   },
-  "author": "anonymous node/sails user",
-  "license": ""
+  "contributors": [
+    "Anton Panin",
+    "Nikolay Kluyev"
+  ],
+  "license": "MIT"
 }

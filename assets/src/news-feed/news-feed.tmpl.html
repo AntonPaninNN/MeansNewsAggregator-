@@ -1,0 +1,38 @@
+<div>
+    <mna-menu></mna-menu>
+    <div class="pure-g mna-newsfeed">
+        <div class="pure-u-6-24"></div>
+        <div class="pure-u-14-24">
+            <a id="mna-top" href="#"></a>
+            <p class="mna-section-header">news feed</p>
+            <mna-preloader is-data-loading="{{feedCtrl.isDataLoading}}"></mna-preloader>
+            <div ng-repeat="news in feedCtrl.allNews">
+                <div class="mna-newsfeed-news-title">
+                    <div class="mna-newsfeed-news-header">
+                        <h3>
+                            <a ng-href="news/id_{{news.news.id}}">{{news.news.title}}</a>
+                        </h3>
+                    </div>
+                    <div class="mna-newsfeed-news-info">
+                        <a ng-href="{{news.news.news_link}}" class="mna-newsfeed-news-site" target="_blank">
+                            <img ng-src="{{news.site.favicon}}" alt="{{news.site.name}}">
+                            {{news.site.name}}
+                        </a>
+                        <p class="mna-newsfeed-news-pubdate">
+                            Publication date: {{news.news.publication_date | date:'dd.MM.yyyy HH:mm'}}
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div ng-repeat="textLines in news.news.text">
+                        <p>{{textLines}}</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="pure-u-4-24">
+            <mna-scroll-to-top></mna-scroll-to-top>
+        </div>
+    </div>
+</div>

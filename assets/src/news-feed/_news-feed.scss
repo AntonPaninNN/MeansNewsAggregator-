@@ -1,0 +1,31 @@
+.mna-newsfeed {
+  &-news {
+    &-title {
+
+    }
+
+    &-header {
+
+    }
+
+    &-info {
+      a {
+        font-size: 14px;
+        img {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+
+    &-site {
+      display: inline-block;
+    }
+
+    &-pubdate {
+      display: inline-block;
+      float: right;
+      font-size: 15px;
+    }
+  }
+}

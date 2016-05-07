@@ -1,0 +1,34 @@
+buildProd:
+  description: 'production build'
+  tasks:
+    - 'concat:js'
+    - 'prepareStyles'
+    - 'uglify'
+    - 'clean:build'
+    - 'copy:build'
+
+prepareStyles:
+  description: 'preparing styles'
+  tasks:
+    - 'sass'
+    - 'concat:css'
+    - 'copy:fonts'
+
+buildDev:
+  description: 'development build'
+  tasks:
+    - 'concat:js'
+    - prepareStyles
+
+frontDev:
+  description: 'task for frontend development'
+  tasks:
+    - buildDev
+    - 'sync'
+    - 'watch'
+
+default:
+  description: 'default task'
+  tasks:
+    - 'clean:dev'
+    - frontDev

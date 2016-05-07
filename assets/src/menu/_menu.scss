@@ -1,0 +1,87 @@
+$mna-default-border: 1px solid black;
+
+.mna-menu {
+  width: 210px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000; /* so the menu or its navicon stays above all content */
+  background: #BCBABE;;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &-heading {
+    text-align: center;
+    font-size: 16px;
+    background: #1995AD;
+    padding: 20px 16px;
+    color: #F1F1F2;
+  }
+
+  &-userpic-container {
+    border: $mna-default-border;
+    @include mna-border-radius(20px);
+    width: 178px;
+    height: 178px;
+    overflow: hidden;
+    margin: 20px auto auto;
+
+    a {
+      display: block;
+      border: $mna-default-border;
+      @include mna-border-radius(15px);
+      width: 160px;
+      height: 160px;
+      overflow: hidden;
+      margin: 8px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &-ctrls {
+    margin-top: 90px;
+
+    li {
+      margin-top: 12px;
+    }
+  }
+
+  &-user-credentials {
+    height: 50px;
+    font: {
+      weight: bold;
+      size: 18px;
+    }
+    margin: 15px auto auto 15px;
+
+    span {
+      display: block;
+      margin-bottom: 7px;
+    }
+  }
+
+  &-item {
+    &-search {
+      padding: 8px 16px;
+
+      input {
+        width: 136px;
+        height: 30px;
+        padding: 1px 1px 1px 5px;
+        border: none;
+      }
+
+      button {
+        width: 32px;
+        height: 33px;
+        padding: 1px;
+        border: none;
+      }
+    }
+  }
+}

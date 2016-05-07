@@ -79,7 +79,7 @@ module.exports.sockets = {
   *                                                                          *
   * By default, when a socket tries to connect, Sails allows it, every time. *
   * (much in the same way any HTTP request is allowed to reach your routes.  *
-  * If no valid cookie was sent, a temporary session will be created for the *
+  * If no valid cookie was sent, a target session will be created for the *
   * connecting socket.                                                       *
   *                                                                          *
   * If the cookie sent as part of the connection request doesn't match any   *
