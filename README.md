@@ -20,15 +20,18 @@ To run that application:
 git clone https://github.com/FullStackNN/MeansNewsAggregator-.git
 cd MeansNewsAggregator-
 ```
+
 2. Install Node dependencies by running:
 ```
 npm install
 ```
 ([npm](https://www.npmjs.com/) should already be installed on your computer)
+
 3. Install front-end dependencies by running:
 ```
 bower install
 ```
+
 4. Run:
 ```
 sails lift
