@@ -14,25 +14,27 @@ It is a News Aggregator App written using so called MEANS stack (MongoDB, Expres
 <br/>
 
 ### Run the application
+</br>
+
 To run that application:
-1. Clone that repository using [git](https://git-scm.com/):
+* Clone that repository using [git](https://git-scm.com/):
 ```
 git clone https://github.com/FullStackNN/MeansNewsAggregator-.git
 cd MeansNewsAggregator-
 ```
 
-2. Install Node dependencies by running:
+* Install Node dependencies by running:
 ```
 npm install
 ```
 ([npm](https://www.npmjs.com/) should already be installed on your computer)
 
-3. Install front-end dependencies by running:
+* Install front-end dependencies by running:
 ```
 bower install
 ```
 
-4. Run:
+* Run:
 ```
 sails lift
 ```
