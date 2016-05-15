@@ -1,6 +1,6 @@
 angular
     .module("news-aggregator-app")
-    .directive('mnaPreloader', ['$log', function($log) {
+    .directive('mnaPreloader', ['$log', function ($log) {
         return {
             restrict: 'E',
             template: '<img src="img/preloader.gif"/>',
@@ -10,12 +10,13 @@ angular
                 isDataLoading: "@isDataLoading"
             },
             link: function link(scope, element, attrs, controller, transcludeFn) {
-                scope.$watch("isDataLoading", function(newValue){
-                  var $j = angular.element;
-                    if (newValue === "true"){
-                        $j(element[0]).show();
+                scope.$watch("isDataLoading", function (newValue) {
+                    var $j = angular.element;
+                    var elem = $j(element[0]);
+                    if (newValue === "true") {
+                        elem.show();
                     } else {
-                        $j(element[0]).hide();
+                        elem.hide();
                     }
                 });
             }

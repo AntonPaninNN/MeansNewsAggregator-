@@ -1,10 +1,33 @@
+%mna-auth-input {
+
+}
+
 .mna-login {
 
-  h3 {
-    text-align: center;
-  }
+  margin-top: 25px;
 
   &-form fieldset {
     margin: auto;
+  }
+
+  &-fieldgroup {
+    text-align: center;
+    input {
+      outline: none;
+      border-radius: 0 !important;
+      width: 70%;
+    }
+  }
+
+  &-ctrlgroup {
+    text-align: center;
+    margin-top: 25px;
+    div {
+      width: 100%;
+      margin: 0 !important;
+      input {
+        width: 48%;
+      }
+    }
   }
 }

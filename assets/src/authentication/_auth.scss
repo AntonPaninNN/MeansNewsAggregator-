@@ -3,12 +3,16 @@
     text-align: center;
   }
 
-  &-switch-controls {
+  &-switchcontrols {
     text-align: center;
 
     button {
       text-align: center;
       width: 49%;
+    }
+
+    &-active {
+
     }
   }
 }

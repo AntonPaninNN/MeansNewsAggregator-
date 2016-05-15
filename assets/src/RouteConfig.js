@@ -5,13 +5,17 @@ angular
     .module("news-aggregator-app")
     .config(['$routeProvider',
         function ($routeProvider) {
-            //todo move to templateCache like that $templateCache.get('news-feed')
-            //todo or probably to ui router
+            //todo consider moving to ui router
             $routeProvider
                 .when('/news-feed', {
                     templateUrl: 'src/news-feed/news-feed.tmpl.html',
                     controller: 'NewsFeedCtrl',
                     controllerAs: 'feedCtrl'
+                })
+                .when('/news/:newsId', {
+                    templateUrl: 'src/news/news.tmpl.html',
+                    controller: 'NewsCtrl',
+                    controllerAs: 'newsCtrl'
                 })
                 .when('/auth', {
                     templateUrl: 'src/authentication/auth.tmpl.html',

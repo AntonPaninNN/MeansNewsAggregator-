@@ -17,8 +17,7 @@
 
 module.exports = {
   options: {
-    livereload: true,
-    livereloadOnError: false
+    livereload: true
   },
 
   scripts: {
@@ -32,7 +31,7 @@ module.exports = {
   },
 
   sass: {
-    files: 'assets/src**/*.scss',
+    files: 'assets/src/**/*.scss',
     tasks: ['prepareStyles', 'sync']
   },
 

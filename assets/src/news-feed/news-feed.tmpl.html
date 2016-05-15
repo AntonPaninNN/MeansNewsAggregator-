@@ -6,11 +6,18 @@
             <a id="mna-top" href="#"></a>
             <p class="mna-section-header">news feed</p>
             <mna-preloader is-data-loading="{{feedCtrl.isDataLoading}}"></mna-preloader>
+
+            <button ng-click="feedCtrl.showWSNews()"
+                    ng-show="feedCtrl.showWSButton">
+                {{feedCtrl.newsFromWS.length}} fresh news is available. Click to load.
+            </button>
+
             <div ng-repeat="news in feedCtrl.allNews">
                 <div class="mna-newsfeed-news-title">
                     <div class="mna-newsfeed-news-header">
                         <h3>
-                            <a ng-href="news/id_{{news.news.id}}">{{news.news.title}}</a>
+                            <!-- todo find a better way to navigate -->
+                            <a ng-href="index.html#/news/{{news.news.id}}">{{news.news.title}}</a>
                         </h3>
                     </div>
                     <div class="mna-newsfeed-news-info">

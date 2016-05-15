@@ -57,7 +57,8 @@ module.exports = {
 						text: finalContent
 					};
 
-					sockIo.sockets.emit('eventClient', news);
+					//todo we probably should emit only for correct clients
+					sockIo.sockets.emit('newNews', news);
 
 					NewsService.setNews(news, function(success) {
 						newsCount--;
