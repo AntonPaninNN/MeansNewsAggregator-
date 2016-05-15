@@ -14,7 +14,6 @@ It is a News Aggregator App written using so called MEANS stack (MongoDB, Expres
 <br/>
 
 ### Run the application
-</br>
 
 To run that application:
 * Clone that repository using [git](https://git-scm.com/):
