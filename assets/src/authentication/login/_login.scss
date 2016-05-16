@@ -6,17 +6,29 @@
 
   margin-top: 25px;
 
-  &-form fieldset {
-    margin: auto;
+  &-form {
+    fieldset {
+      margin: auto;
+    }
   }
 
   &-fieldgroup {
     text-align: center;
+
     input {
       outline: none;
       border-radius: 0 !important;
       width: 70%;
+      margin-right: 0;
     }
+
+    button {
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 5px;
+    }
+  ;
   }
 
   &-ctrlgroup {
