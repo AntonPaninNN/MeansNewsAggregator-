@@ -14,6 +14,7 @@
                        ng-minlength="4"
                        required>
             </div>
+            <!--todo for firstname and lastname-->
             <!--<div class="pure-control-group mna-register-firstname">
                 <label for="mna-register-firstname">First Name</label>
                 <input type="text"
@@ -59,7 +60,7 @@
             </div>
             <div class="pure-control-group">
                 <!--todo add password matching support later-->
-                <span ng-show="registrationForm.passwordRepeated.$error">
+                <span ng-show="registrationForm.passwordRepeated.$error && registrationForm.password.$dirty">
                     Passwords doesn't match
                 </span>
                 <label for="mna-register-repeat-password">Repeat password</label>
@@ -68,7 +69,6 @@
                        ng-model="regCtrl.newUser.repeatedPassword"
                        placeholder="Repeat password"
                        id="mna-register-repeat-password"
-                       ng-minlength="6"
                        required>
             </div>
             <div class="pure-controls">

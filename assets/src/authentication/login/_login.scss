@@ -1,10 +1,4 @@
-%mna-auth-input {
-
-}
-
 .mna-login {
-
-  margin-top: 25px;
 
   &-form {
     fieldset {
@@ -18,28 +12,40 @@
     input {
       outline: none;
       border-radius: 0 !important;
-      width: 70%;
-      margin-right: 0;
+      width: 60%;
+      margin-left: 15%;
+      float:left;
+      margin-top: 15px;
     }
 
     button {
       border: none;
       outline: none;
-      margin: 0;
-      padding: 5px;
+      height: 37px;
+      width: 10%;
+      float:left;
+      margin: 15px 15% 0 0;
     }
-  ;
   }
 
   &-ctrlgroup {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 128px;
+
     div {
       width: 100%;
       margin: 0 !important;
       input {
-        width: 48%;
+        text-align: center;
+        width: 34.7%;
+        border-radius: 0;
       }
+    }
+
+    a {
+      margin-top: 15px;
+      margin-left: 33%;
+      float: left;
     }
   }
 }

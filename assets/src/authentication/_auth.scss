@@ -3,16 +3,24 @@
     text-align: center;
   }
 
-  &-switchcontrols {
-    text-align: center;
+  &-switch {
 
-    button {
-      text-align: center;
-      width: 49%;
+    &-layout {
+      border: 1px solid black;
     }
 
-    &-active {
+    &-controls {
+      text-align: center;
+      button {
+        text-align: center;
+        width: 40%;
+        margin-top: 33px;
+        border-radius: 0;
+      }
 
+      &-active {
+
+      }
     }
   }
 }
