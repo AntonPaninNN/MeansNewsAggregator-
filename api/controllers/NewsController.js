@@ -13,6 +13,12 @@ module.exports = {
 		});
 	},
 
+	getLastNews: function(req, res) {
+		NewsService.getLastNews(function(news) {
+			res.json(news);
+		}, req.param('id'), req.param('lim'));
+	},
+
 	getNews: function(req, res) {
 		var from = req.param('from');
 		var limit = req.param('limit');
@@ -21,18 +27,25 @@ module.exports = {
 		}, from, limit);
 	},
 
+	getNewsText: function(req, res) {
+		var id = req.param('id');
+		NewsService.getNewsText(function(news) {
+			res.json(news);
+		}, id);
+	},
+
 	setNews: function(req, res) {
-		var crypto = require('crypto');
-		var news = {
-			id: crypto.randomBytes(20).toString('hex'),
-			title: req.param('title'),
-			intro: req.param('intro'),
-			text: req.param('text'),
-			pictureUrl: req.param('pictureurl')
-		};
-		NewsService.setNews(news, function(success) {
-			res.json(success);
-		});
+			var crypto = require('crypto');
+			var news = {
+				id: crypto.randomBytes(20).toString('hex'),
+				title: req.param('title'),
+				intro: req.param('intro'),
+				text: req.param('text'),
+				pictureUrl: req.param('pictureurl')
+			};
+			NewsService.setNews(news, function(success) {
+				res.json(success);
+			});
 	},	
 
 	deleteAllNews: function(req, res) {
