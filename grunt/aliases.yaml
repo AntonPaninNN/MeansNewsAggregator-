@@ -31,4 +31,5 @@ default:
   description: 'default task'
   tasks:
     - 'clean:dev'
-    - frontDev
+    - buildDev
+    - 'sync'
