@@ -36,6 +36,8 @@ module.exports.routes = {
     view: 'homepage'
   },
 
+  'get /check': 'VerificationController.verifyEmail'
+
   /*'get /fuck/yeah': 'NewsController.getNews'*/
 
   /***************************************************************************

@@ -10,7 +10,8 @@
  */
 module.exports.globals = {
 
-    sockIo: 'undefined'
+    sockIo: 'undefined',
+    dataPath: '/data'
 
   /****************************************************************************
   *                                                                           *

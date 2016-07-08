@@ -1,5 +1,6 @@
 /* Polling Service */
 
+var computerweekly = require('./itsites/computerweekly.js');
 var request = require('request');
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
@@ -54,6 +55,9 @@ module.exports = {
 						link: item.link[0],
 						author: item.author[0],
 						pubDate: new Date(item.pubDate[0]),
+						siteName: computerweekly.SiteData.name,
+						siteIconLink: computerweekly.SiteData.siteIconLink,
+						siteLink: computerweekly.SiteData.siteLink,
 						text: finalContent
 					};
 

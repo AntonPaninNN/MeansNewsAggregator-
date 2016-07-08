@@ -39,6 +39,18 @@ module.exports = {
       type: 'datetime'
     },
 
+    siteName: {
+      type: 'string'
+    },
+
+    siteIconLink: {
+      type: 'string'
+    },
+
+    siteLink: {
+      type: 'string'
+    },
+
     author: {
       type: 'string'
     }
